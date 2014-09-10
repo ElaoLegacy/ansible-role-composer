@@ -5,3 +5,9 @@
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     creates=/usr/local/bin/composer
   sudo: yes
+
+- name: path
+  lineinfile: >
+    dest=~/.profile
+    line='PATH="$PATH:~/.composer/vendor/bin"'
+    state=present
