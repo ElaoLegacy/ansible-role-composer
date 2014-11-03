@@ -1,0 +1,7 @@
+---
+
+- name: path
+  lineinfile: >
+    dest=~/.profile
+    line='PATH="$PATH:~/.composer/vendor/bin"'
+    state=present
