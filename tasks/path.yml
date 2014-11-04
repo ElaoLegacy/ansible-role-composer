@@ -1,7 +1,19 @@
 ---
 
-- name: path
-  lineinfile: >
-    dest=~/.profile
-    line='PATH="$PATH:~/.composer/vendor/bin"'
-    state=present
+- name: path profile
+  template: >
+    src=profile.sh.j2
+    dest=/etc/profile.d/composer.sh
+  sudo: yes
+
+- name: zprofile directory
+  file: >
+    path=/etc/zprofile.d
+    state=directory
+  sudo: yes
+
+- name: path zprofile
+  template: >
+    src=zprofile.zsh.j2
+    dest=/etc/zprofile.d/composer.zsh
+  sudo: yes
