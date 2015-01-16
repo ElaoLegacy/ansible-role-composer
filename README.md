@@ -10,6 +10,14 @@ Requirements
 This role only run on elao symfony standard vagrant box. See https://vagrantcloud.com/elao/symfony-standard-debian
 
 
+Role Variables
+--------------
+
+    elao_composer_auth:    # Auth config
+      github-oauth:
+        github.com: xxxx
+
+
 Example Playbook
 ----------------
 
