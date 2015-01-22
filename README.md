@@ -9,6 +9,10 @@ Requirements
 
 This role only run on elao symfony standard vagrant box. See https://vagrantcloud.com/elao/symfony-standard-debian
 
+Dependencies
+------------
+
+This role requires php cli binary.
 
 Role Variables
 --------------
@@ -23,7 +27,8 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: elao.composer }
+        - { role: elao.php }
+        - { role: elao.composer }
 
 
 License

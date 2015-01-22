@@ -1,9 +1,5 @@
 ---
 
-dependencies:
-
-  - { role: elao.php }
-
 galaxy_info:
 
   author:              elao
