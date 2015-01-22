@@ -4,12 +4,12 @@
   file: >
     path=~/.composer
     state=directory
-  when: elao_composer_auth|length > 0
+  when: elao_composer_config_auth|length > 0
   sudo: no
 
 - name: config auth
   template: >
     src=auth.json.j2
     dest=~/.composer/auth.json
-  when: elao_composer_auth|length > 0
+  when: elao_composer_config_auth|length > 0
   sudo: no

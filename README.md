@@ -13,7 +13,7 @@ This role only run on elao symfony standard vagrant box. See https://vagrantclou
 Role Variables
 --------------
 
-    elao_composer_auth:    # Auth config
+    elao_composer_config_auth:    # Auth config
       github-oauth:
         github.com: xxxx
 
