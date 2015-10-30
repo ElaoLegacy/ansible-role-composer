@@ -5,3 +5,7 @@
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     creates=/usr/local/bin/composer
   sudo: yes
+
+- name: update
+  shell: /usr/local/bin/composer self-update
+  sudo: yes
